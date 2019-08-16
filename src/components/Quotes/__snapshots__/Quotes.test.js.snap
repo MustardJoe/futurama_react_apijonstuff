@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quotes component test renders Quotes components, which is list of Quote comps 1`] = `
+<ul
+  className="Quotes"
+>
+  <li
+    key="0"
+  >
+    <Quote
+      quote={
+        Object {
+          "character": "Fry",
+          "image": "/image",
+          "quote": "What??",
+        }
+      }
+    />
+  </li>
+  <li
+    key="1"
+  >
+    <Quote
+      quote={
+        Object {
+          "character": "Fry",
+          "image": "/image",
+          "quote": "Huh??",
+        }
+      }
+    />
+  </li>
+</ul>
+`;

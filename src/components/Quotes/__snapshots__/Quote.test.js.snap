@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component test renders Quote item 1`] = `
+<section>
+  <img
+    src="bestBenderImage"
+  />
+  <p>
+    Bender
+  </p>
+  <p>
+    Bender is the greatest
+  </p>
+</section>
+`;
