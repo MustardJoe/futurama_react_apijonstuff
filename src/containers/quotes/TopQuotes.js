@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Quotes from '../../components/Quotes/Quotes';
+import Loading from '../../components/Loading';
 import { getQuotes } from '../../services/futuramaApi';
 
 class TopQuotes extends Component {
@@ -14,13 +15,13 @@ class TopQuotes extends Component {
 
   state = {
     quotes: [],
-    //Loading will go here
+    loading: true,
   }
 
   fetchQuotes = () => {
-    //loading set state adjust goes here
+    this.setState({ loading: true });
     getQuotes(this.props.count)
-      .then(quotes => this.setState({ quotes }));
+      .then(quotes => this.setState({ quotes, loading: false }));
   }
 
   componentDidMount() {
@@ -34,7 +35,8 @@ class TopQuotes extends Component {
   }
 
   render() {
-    const { quotes } = this.state;
+    const { quotes, loading } = this.state;
+    if(loading) return <Loading />;
 
     return <Quotes quotes={quotes} />;
   }
