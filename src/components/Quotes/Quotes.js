@@ -5,7 +5,7 @@ import styles from './Quotes.css';
 
 function Quotes({ quotes }) {
   const quoteList = quotes.map((quoteObj, i) => (
-    <li className='quoteListItem' key={i}>
+    <li className={styles.quoteListItem} key={i}>
       <Quote quoteObj={quoteObj} />
     </li>
   ));
